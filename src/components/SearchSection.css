@@ -1,0 +1,222 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Responsive fix */
+}
+
+/* Toggle Buttons (Buy & Rent) */
+.toggle-buttons {
+  display: flex;
+  background: #f6f6f6;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+  transition: background 0.3s ease-in-out;
+}
+
+.toggle-btn.active {
+  background: #3483c1;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced visibility */
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 600px; /* More flexible width */
+  background: white;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.search-icon {
+  color: #ff6f61;
+  margin-right: 8px;
+}
+
+.location-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #b89b7c;
+}
+
+/* Dropdown */
+.dropdown select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+  max-width: 280px; /* Prevents overly wide dropdown */
+  height: 47px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown select:focus {
+  border-color: #3483c1;
+  outline: none;
+}
+
+/* Find Button */
+.find-btn {
+  background: #ff8258;
+  color: white;
+  border: none;
+  padding: 14px 24px; /* Increased padding for better UX */
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.find-btn:hover {
+  background: #ff6434;
+  transform: scale(1.05);
+}
+
+/* Listings & Filters Section */
+.listings-filter-section {
+  display: flex;
+  justify-content: space-between;
+  width: 89%;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 10px 0;
+  gap: 20px;
+}
+
+.listings-info h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.listings-info p {
+  color: #777;
+  font-size: 14px;
+}
+
+.filter-options {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.map-view-toggle input {
+  margin-left: 5px;
+}
+
+.sort-dropdown select {
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+
+/* Tablet Screens (768px and below) */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .toggle-buttons {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search-box {
+    min-width: 100%;
+  }
+
+  .dropdown select {
+    width: 100%;
+  }
+
+  .find-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .listings-filter-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .filter-options {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+  .search-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .toggle-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-box {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .dropdown select {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .find-btn {
+    width: 100%;
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .listings-filter-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .filter-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
